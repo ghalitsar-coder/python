@@ -25,10 +25,10 @@ data_panen = {
 def harvest_list(data):
     """Fungsi untuk melihat hasil panen"""
     print(" ======== Nomor 1 ===========")
-    [print( f"Lokasi {value['nama_lokasi']} Hasil panen\nJagung {value['hasil_panen']['jagung']}\nPadi {value['hasil_panen']['padi']}\nKedelai {value['hasil_panen']['kedelai']} {'\n'} ") for value in data.values()]
+    [print( f"Lokasi {value['nama_lokasi']}\nHasil panen\nJagung {value['hasil_panen']['jagung']}\nPadi {value['hasil_panen']['padi']}\nKedelai {value['hasil_panen']['kedelai']} {'\n'} ") for value in data.values()]
     
     print("\n ======== Nomor 2 ===========")
-    [print(f"Lokasi {value['nama_lokasi']} Hasil panen\nJagung {value['hasil_panen']['jagung']}{'\n'*1} ")for value in data.values()]
+    [print(f"Lokasi {value['nama_lokasi']}\nHasil panen\nJagung {value['hasil_panen']['jagung']}{'\n'*1} ")for key, value in data.items() if key == 'lokasi2' ]
     
     print("\n ======== Nomor 3 ===========")
     [print(f"Nama Lokasi dari {key} adalah {value['nama_lokasi']}\n")for key, value in data.items()if key == "lokasi3"]
