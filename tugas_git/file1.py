@@ -40,9 +40,9 @@ def harvest_list(data):
         for key, value in data.items()
         if key == "lokasi3"
     ]
-    rice_fields = sum(val["hasil_panen"]["padi"] for val in data.values())
-    soybean_fields = sum(val["hasil_panen"]["kedelai"] for val in data.values())
-    print(f"Hasil panen Padi : {rice_fields} , Kedelai : {soybean_fields}")
+    rice_fields_sum = sum(val["hasil_panen"]["padi"] for val in data.values())
+    soybean_fields_sum = sum(val["hasil_panen"]["kedelai"] for val in data.values())
+    print(f"Hasil panen Padi : {rice_fields_sum} , Kedelai : {soybean_fields_sum}")
     
     [{key:{'padi':val['hasil_panen']['padi'],'kedelai':val['hasil_panen']['kedelai']}}  for key, val in data.items()]
     [print(f"Lokasi {val['nama_lokasi']} memerlukan perhatian khusus") if val['hasil_panen']['padi'] > 1300 or val['hasil_panen']['jagung'] > 800 else print(f"Lokasi {val['nama_lokasi']} dalam kondisi baik ") for key, val in data.items()]
