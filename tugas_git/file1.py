@@ -23,6 +23,7 @@ data_panen = {
 
 
 def harvest_list(data):
+    """Fungsi untuk melihat hasil panen"""
     print("Nomor 1")
     [
         print(
