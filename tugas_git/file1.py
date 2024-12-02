@@ -55,7 +55,7 @@ def harvest_list(data):
     dataVar = [{key:{'padi':val['hasil_panen']['padi'],'kedelai':val['hasil_panen']['kedelai']}}  for key, val in data.items()]
     print(f"Variable Baru {dataVar}")
 
-    print("\n\nNomor 6")
+    print("\nNomor 6")
     [print(f"Lokasi {val['nama_lokasi']} memerlukan perhatian khusus") if val['hasil_panen']['padi'] > 1300 or val['hasil_panen']['jagung'] > 800 else print(f"Lokasi {val['nama_lokasi']} dalam kondisi baik ") for key, val in data.items()]
 
 
